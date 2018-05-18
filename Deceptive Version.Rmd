@@ -1,0 +1,77 @@
+---
+title: "Deceptive Version"
+author: "Yingjie Yu"
+output:
+  html_document:
+    df_print: paged
+---
+
+# Deceptive Version for “America’s unique gun violence problem”
+In this report, I chose three claim from the original article and their corresponding plots, which I think would generate misunderstandings when being illustrated in deceptive ways. The original plots and deceptive plots are using almost the same data source but are shown in either different dimensions or different metics. 
+
+### Claim 1: America has six times as many firearm homicides as Canada, and nearly 16 times as many as Germany
+
+```{r echo=FALSE,out.width = '60%'}
+url1 = "https://cdn.vox-cdn.com/thumbor/Mu8atIOWulSS_ztu2cphOxgFsj4=/0x0:800x1571/1720x0/filters:focal(0x0:800x1571):format(webp)/cdn.vox-cdn.com/uploads/chorus_asset/file/10228297/gun_homicides_per_capita.jpg"
+
+```
+<center><img src="`r url1`"></center>
+
+This plot intends to tell us how severe the firearm homicide is in US, compared with other developed countries.  However, there are several problem with this plot.
+
+* It does not provide explanation for choosing those 14 countries. As we know, there are 34 developed countries in the world
+* A huge part of developed countries have strict gun control. Therefore, directly making comparison of firearm homicide rate may be not make any sense. 
+
+```{r pressure, echo=FALSE, fig.cap="DATA SOURCE: OECD Numbers", out.width = '60%'}
+knitr::include_graphics("1.png")
+```
+
+
+Here is plot from another point of view. When all developed countries are included, we can see that even though US has high firearm homicide rate across developed countries, it only ranks fifth and had an obvious huge gap between Brazil, mexico and Russia.  Furthermore, when taking gun ownership rate into consideration, we can find that US does not show up and locates below median point. This is contract to the claim that “America far and away leads other developed countries when it comes to gun-related homicides.”
+
+### Claim 6: It’s not just the US: Developed countries with more guns also have more gun deaths
+```{r echo=FALSE,out.width = '60%'}
+url2 = "https://cdn.vox-cdn.com/thumbor/55GPsm0JuIf0u68No9CVtqBLPuk=/0x0:3840x2794/1720x0/filters:focal(0x0:3840x2794):format(webp)/cdn.vox-cdn.com/uploads/chorus_asset/file/10328765/GUN_SCATTERPLOT_2x.png"
+```
+<center><img src="`r url2`"></center>
+
+From this plot we can intuitively inference that the higher the gun ownership rate, the higher the gun death. However, taking a further step of thought, we can find several issues:
+
+* When taking United States out of the plot, the relation is not necessarily straightforward and obvious, which is contrary to the claim “It’s not just the US”.
+* Gun-related death may not be a good metric to evaluate death rate because gun ownership rate and gun-related death have inherent relation. Therefore, using a more general death rate such as homicide rate should be more reasonable.
+
+```{r  echo=FALSE, fig.cap="DATA SOURCE: OECD Numbers", out.width = '50%'}
+knitr::include_graphics("2.1.png")
+```
+
+```{r echo=FALSE, fig.cap="DATA SOURCE: OECD Numbers", out.width = '50%'}
+knitr::include_graphics("2.2.png")
+```
+
+Here we can see from the plot of gun ownership rate vs. homicide rate for developed countries, the relationship is actually negative, which means the higher the gun ownership rate, the lower the homicide rate. Even when comparing the gun ownership with the firearm homicide rate, the relation still shows an negative trend.
+
+```{r echo=FALSE, fig.cap="DATA SOURCE: OECD Numbers", out.width = '50%'}
+knitr::include_graphics("2.3.png")
+```
+
+When taking Brazil, US and Russia(outlier counties) out, the relationship is even less clear. Therefore, from this perspective, the claim is not justified.
+
+
+### Claim 9: Still, gun homicides (like all homicides) have declined over the past couple decades
+```{r echo=FALSE,out.width = '60%'}
+url3 = "https://cdn.vox-cdn.com/thumbor/fsGRktGSnwO7XymX8qtP1unsFak=/0x0:417x395/1720x0/filters:focal(0x0:417x395):format(webp)/cdn.vox-cdn.com/uploads/chorus_asset/file/9371435/firearm_homicide_deaths.png"
+```
+<center><img src="`r url3`"></center>
+
+
+This plot was supposed to support the claim “The good news is that firearm homicides, like all homicides and crime, have declined over the past two decades”.  We indeed can see a declining trend from the plot. However, moving the time slot to more recent year, we can see a totally different story, as shown in the plot below. 
+
+```{r echo=FALSE, fig.cap="DATA SOURCE: WISQARS", out.width = '50%'}
+knitr::include_graphics("3.png")
+```
+
+
+From this plot we can see that when setting time frame as from 1998 to 2016, the trend of firearm homicide rate is even with fluctuation or slightly rising. This is definitely not a “good news” and the corresponding debate is meaningless. 
+
+### Conclusion
+In conclusion, it is also important to give a second thought when we analysis a plot. The same data source can generate totally opposite opinions when we change the way to plot, as shown in this report. We should pay attention to the assumptions behind those plot and look for sound supports. 
