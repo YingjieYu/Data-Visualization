@@ -84,9 +84,10 @@ After found popular majors during years, we tried to find claims for them to exp
 ## Finding 2:  Male and female are remarkably different in choosing their college majors, as a result, there is wage gap between gender.
 
 ![](images/finding2-1.png)
+![](images/finding2-1-1.png)
 
 ### 2.1 Description
-College education is a major investment in lifetime. Women increasingly participated in college education over years, and the total number of women’s degree holders outweighed the total number of men’s since 1980s (cite, need graph?). However, in term of major preference, male and female were remarkably different: female students were more likely to choose Elementary/General Education and Nursing as their majors, while male students prefered Business-related majors, as showed in the graph above. As a result, there is a wage gap between genders because most men choose to major in the higher-income field of studies.
+College education is a major investment in lifetime. Women increasingly participated in college education over years, and the total number of women’s degree holders outweighed the total number of men’s since 1980s (Perry, 2017). However, in term of major preference, male and female were remarkably different: female students were more likely to choose Elementary/General Education and Nursing as their majors, while male students prefered Business-related majors, as showed in the graph above. As a result, there is a wage gap between genders because most men choose to major in the higher-income field of studies.
 
 ### 2.2 Development Process
 After looking the overall popular majors, we explored the top 6 popular majors between genders. To explore major preference in gender, we grouped the processed data file (“census_final + merge with major_category”) by major and gender to summarize count of major. We choose the top 6 popular majors  in total counts to analyze since it’s consistent with the previous finding, and we think it’s worth to further explore the most popular majors in the perspective of gender.
@@ -162,11 +163,11 @@ There are three business-related fields of study in top ten majors, including Bu
 [7](http://www.naceweb.org/job-market/compensation/salary-trends-through-salary-survey-a-historical-perspective-on-starting-salaries-for-new-college-graduates/)
 
 ### Improvement 
-1 For finding one, we see overall view by year. We still want to explore popular majors by states and to get a more macro view.
+For finding one, we see overall view by year. We still want to explore popular majors by states and to get a more macro view.
 
-2 For finding two, we see the income difference by majors/specialized majors, but not separate by gender. We will analyze income difference by major and by gender in the future. In addition, we find that the total number of women majoring in science, technology, and mathematics are very close to the total number of men majoring in these fields. The only difference in STEM field is engineering. Related to the recent movement that promoting women working in STEM industry, we wonder if there are relation between women major in STEM and women work in STEM.
+For finding two, we see the income difference by majors/specialized majors, but not separate by gender. We will analyze income difference by major and by gender in the future. In addition, we find that the total number of women majoring in science, technology, and mathematics are very close to the total number of men majoring in these fields. The only difference in STEM field is engineering. Related to the recent movement that promoting women working in STEM industry, we wonder if there are relation between women major in STEM and women work in STEM.
 
-3 For finding three, we claim business-related majors keep being popular over years by showing career choices for the 10 most majors and concentrate on occupation variety for those major. In order to figure out reason, we could take more factor into consideration, such as  income stability, income level and gender gap in major.
+For finding three, we claim business-related majors keep being popular over years by showing career choices for the 10 most majors and concentrate on occupation variety for those major. In order to figure out reason, we could take more factor into consideration, such as  income stability, income level and gender gap in major.
 
 
 ## References:
