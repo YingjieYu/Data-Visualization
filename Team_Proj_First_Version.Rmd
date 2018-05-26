@@ -95,16 +95,20 @@ The report is consistent with our finding. From the data, we generated the avera
 ![](images/finding2-2.png)
 
 The graph shows average income in early career  among specialized categories of major, link:
+https://public.tableau.com/profile/feng.wang2440#!/vizhome/major_income_entry/Sheet22?publish=yes
+
 
 The income gap became much wider when analyzing the mid-career average income by majors: major in education was the lowest category in term of mid-career income levels, while students major in engineering increased their income more than double.
 
 ![](images/finding2-3.png)
 The graph shows average income in mid career era among specialized categories of major, link:
+https://public.tableau.com/profile/feng.wang2440#!/vizhome/major_income_mid/Sheet2?publish=yes
+
 
 Combining with our finding two that women prefered major in lower-earning fields, such as Education, while men concentrated in higher-earning fields, we could easily conclude that gender difference in major was one of driver for gender pay gap as shown in following graph.
 ![](images/finding2-4.png)
 
-The graph represent early career average income between gender and over majors, the middle line (45% degree) is a equity line, which means the closer to this line, the more equal income, the blue dash line and orange dash line are trend line in each group: blue group means female income is less than male income in same major, and vice versa in orange line.
+The graph represent early career average income between gender and over majors, the middle line (45% degree) is a equity line, which means the closer to this line, the more equal income, the blue dash line and orange dash line are trend line in each group: blue group means female income is less than male income in same major, and vice versa in orange line.Link:https://public.tableau.com/profile/feng.wang2440#!/vizhome/gender_income_with_major_category/Sheet1
 
 ## Finding 3: Business-related majors are popular over the years since business graduates can work in a wider variety of occupations.
 
