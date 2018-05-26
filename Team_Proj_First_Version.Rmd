@@ -26,7 +26,7 @@ After found popular majors during years, we tried to find claims for them to exp
 
 1. From graph we can see education once was the most popular major for almost 40 years. Through reading essays we found investment in education had a huge increase after world war. According to those papers, recruitment difficulty of world war made America government feel the lack of popularity in education so after war both local and state government increase investment percentage of GDP on education.From chart below we can see two peaks in 1935 and 1970, and it increasing fast both from 1920 and 1940 which were exactly year after world war I and  Ⅱ. This can explain why education became most popular major during 1935 to 1970, for more school and opportunities in education field were created, it would be easier to find a job if people study education. [reference: https://ourworldindata.org/financing-education] 
 
-![]('finding1-2.png')
+![](finding1-2.png)
 
 2. During 1960 to 1975 we found nursing and psychology arrived their peaks. In history of America, during that time Vietnam war happened and hippie movement began. We thought at that time for wars happened frequently and army needed plenty people major in nursing, it make nursing a hot major. And also topics in that period were always related to art, religion, drugs, love and sex, in other words in Spiritual level, therefore people tend to learn themselves well and learning psychology became a quick path to do so. [references: https://www.history.com/topics/vietnam-war/women-in-the-vietnam-war] [https://ibizatimes.wordpress.com/2015/03/02/the-hippie-movement-was-a-psychological-operation/]
 
@@ -34,6 +34,8 @@ After found popular majors during years, we tried to find claims for them to exp
 [references: https://www.investopedia.com/articles/economics/08/1970-stagflation.asp]
 
 4. Business kept its top one position until 21 century. More specific, it was surpassed by psychology in 2003. From 1999 psychology began increasing and arrived its peak in 2003. We noticed that in 2001 ‘September 11 attack’ happened in America, which hit American seriously. We felt this hurt American in both physical and mental level. From a dataset that show expenditures of people on mental health by year we found a turning point in 1998, after which spending on mental health increasing faster. We can see from chart below:
-![]('finding1-3.png')
+![](finding1-3.png)
 [references: https://www.cdc.gov/nchs/hus/contents2016.htm#mentalhealth]
+
+### Finding 2:  Male and female are remarkably different in choosing their college majors, as a result, there is wage gap between gender.
 
