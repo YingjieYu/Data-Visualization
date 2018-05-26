@@ -69,6 +69,7 @@ After found popular majors during years, we tried to find claims for them to exp
 1. From the graph, we saw that Elementary/General Education had been the most popular major for almost 40 years. One possible explanation is that there was a huge increase in investment on education after World War I & II.  According to the research produced by the Oxford Martin Programme at Oxford University, recruitment difficulty of world war made the US government feel the lack of popularity in education, so after war both local and state governments increased investment on education (Max and Esteban, 2018). From chart below, we can see two peaks in 1935 and 1970, and it growthly increased after 1920 and after 1940, which were the exactly years after World War I and II. This can explain why education became the most popular major between 1935 and 1970: for more school and opportunities in education field were created, it would be easier to find a job if people studied in education. [1](https://ourworldindata.org/financing-education)
 
 ![](images/finding1-2.png)
+
 Source: Financing Education
 
 2. During 1960 to 1975, Nursing and Psychology majors arrived their peaks when Vietnam War happened and hippie movement began. During that time, Nursing become a hot major because wars happened frequently, and army needed plenty of people who skilled at nursing. According to History.com Staff, the Vietnam Women’s Memorial Foundation estimates that approximately 11,000 military women were stationed in Vietnam during the conflict. Nearly all of them were volunteers, and 90 percent served as military nurses (History.com Staff, 2011)[2](https://www.history.com/topics/vietnam-war/women-in-the-vietnam-war)Also topics in that period were always related to art, religion, drugs, love and sex, in other words in Spiritual level. Therefore, people tend to learn themselves well and studying psychology became a quick path to do so. From an issue published by Ibiza Times in 2015, we knew that the Psyop was a response from the US government agencies to neutralize the anti-war movement that existed in universities among Academics and students. (Ibiza Times, 2015)[3](https://ibizatimes.wordpress.com/2015/03/02/the-hippie-movement-was-a-psychological-operation/)
@@ -107,6 +108,7 @@ The graph shows average income in mid career era among specialized categories of
 
 Combining with our finding two that women prefered major in lower-earning fields, such as Education, while men concentrated in higher-earning fields, we could easily conclude that gender difference in major was one of driver for gender pay gap as shown in following graph.
 ![](images/finding2-4.png)
+
 The graph represent early career average income between gender and over majors, the middle line (45% degree) is a equity line, which means the closer to this line, the more equal income, the blue dash line and orange dash line are trend line in each group: blue group means female income is less than male income in same major, and vice versa in orange line.
 
 ## Finding 3: Business-related majors are popular over the years since business graduates can work in a wider variety of occupations.
