@@ -46,7 +46,7 @@ Since the dataset covers surveys from 2012 - 2016, it is necessary to adjust inc
 census$income_2016 <- census$ADJINC*0.000001*census$PINCP
 census = census[,c("ST","FOD1P","SCH","SCHG","SCHL","INDP","NAICSP","SEX","RAC1P","AGEP","COW","survey_year", "college_year", "stname", "stusps", "income_2016")]
 ```
-
+To see major names clearly we merge “census_final data with major_category data” in Tableau.
 
 ## Finding 1:  Elementary Education, General Education, Business, Nursing and Psychology are the most popular majors from 1935 to 2008.
 ![](images/finding1-1.png)
