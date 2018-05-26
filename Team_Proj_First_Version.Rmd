@@ -4,12 +4,18 @@ author: Zhonghe Han, Tianmi Li, Yingjie Yu, Feng Wang, Jieyi Deng
 
 ---
 
-## First Version for Team Project
+# First Version Team Project -- College Education
+## Introduction 
+This project is looking at college education related data to see how college education changes over time and how does it affect people. Specifically, we are looking at the following research questions:
+1. What college majors are trending over years?
+2. How does the most popular college majors vary across gender?
+3. What is the relationship between college majors and occupations?
+This document looks at the three research questions listed above and tries to find reasons behind them. 
 
-### Introduction
+## Data Source and Data Cleaning
+Data used for the projects come from US Census Bureau and Centers for Disease Control and Prevention. Following are the data cleaning process to retrieve the information we need to answer the research questions.
 
-### Data Source and Cleaning
-
+Read and Combine Raw Data
 ```{r}
 library(data.table)
 census1 = fread('ss16pusa.csv')
@@ -22,9 +28,32 @@ census4 = fread('ss16pusd.csv')
 census4 = census4[,c("ST","ADJINC","FOD1P","SCH","SCHG","SCHL","INDP","NAICSP","SEX","RAC1P","PINCP","AGEP","CITWP","COW","SERIALNO")]
 census = rbind(census1, census2, census3, census4)
 ```
+The research questions we looked at for the project are related to college education. As a result, we are removing the records that have missing values for the field of degree(FOD1P). 
+```{r}
+census = census[!is.na(census$FOD1P),]
+```
+In order to understand how popular majors change over years, it is essential to know when did a person attend college. This information is not provided in the data set. To get around with the problem, we make an assumption that people attend college at 18. By substrating the age of the respondent from the year the person took the survey and then add by 18, we will be able to get the year of the person attending college based on the assumption. The year of the survey is not explicitly provided in the data but we are able to get this information by taking the first four digits of the GQ person serial number (SERIALNO). 
+```{r}
+census$survey_year <-substr(census$SERIALNO,1,4)
+census$survey_year <- as.numeric(census$survey_year)
+census$college_year<-census$survey_year - census$AGEP + 18
+census = census[,c("ST","ADJINC","FOD1P","SCH","SCHG","SCHL","INDP","NAICSP","SEX","RAC1P","PINCP","AGEP","CITWP","COW","survey_year", "college_year")]
+```
+Get State Name by Merging State FIP code
+```{r}
+state <- read.csv("us-state-ansi-fips.csv")
+colnames(state)[2] <- "ST"
+census <- merge(x = census, y = state, by = "ST", all.x = TRUE)
+```
+Income Inflation Adjusts
+Since the dataset covers surveys from 2012 - 2016, it is necessary to adjust income so as to make them comparable. Using the adjusted factor for income and earnings(ADJINC), we are able to get the total peronal income to 2016 dollars. 
+```{r}
+census$income_2016 <- census$ADJINC*0.000001*census$PINCP
+census = census[,c("ST","FOD1P","SCH","SCHG","SCHL","INDP","NAICSP","SEX","RAC1P","AGEP","COW","survey_year", "college_year", "stname", "stusps", "income_2016")]
+```
 
 
-### Finding 1:  Elementary Education, General Education, Business, Nursing and Psychology are the most popular majors from 1935 to 2010
+## Finding 1:  Elementary Education, General Education, Business, Nursing and Psychology are the most popular majors from 1935 to 2008.
 *Description: *
 In this chart we show trend of top 6 majors over 80 years. Those majors can be divided into four category: Education, Business, Nursing and Psychology. From chart we can see the most popular major category during 1935 and 1970 is education, and it arrives peak in 1970; also though are not the most popular, psychology and nursing arrive their peak during 1961 and 1975; then it comes to business, between 1975 and 2000 two business majors increasing so fast that became top majors during those year and arrive their peaks in 1980; finally after 2000 psychology became the most popular major. 
 
