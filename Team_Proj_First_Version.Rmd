@@ -77,9 +77,9 @@ After found popular majors during years, we tried to find claims for them to exp
 3. Business related majors arrive their peak and beat other majors significantly during 1970s. From historical articles we found America even the whole world came to stagflation and oil crisis in that period. At that time all industries entered their low ebbs and people try to learn business to know better of world economics to save their family as well as their companies. But after that business is always a popular major in university and even economy has recovered. We will explain this in later finding. 
 [4](https://www.investopedia.com/articles/economics/08/1970-stagflation.asp)
 
-4. Business kept its top one position until 21 century. More specific, it was surpassed by psychology in 2003. From 1999 psychology began increasing and arrived its peak in 2003. We noticed that in 2001 ‘September 11 attack’ happened in America, which hit American seriously. We felt this hurt American in both physical and mental level. From a dataset that show expenditures of people on mental health by year we found a turning point in 1998, after which spending on mental health increasing faster. We can see from chart below:
+4. Business kept its top one position until 21 century. More specific, it was surpassed by psychology in 2003. From 1999 psychology began increasing and arrived its peak in 2003. We noticed that in 2001 ‘September 11 attack’ happened in America, which hit American seriously. We felt this hurt American in both physical and mental level. From a dataset that show expenditures of people on mental health by year we found a turning point in 1998, after which spending on mental health increasing faster.[5](https://www.cdc.gov/nchs/hus/contents2016.htm#mentalhealth) We can see from chart below:
 ![](images/finding1-3.png)
-[5](https://www.cdc.gov/nchs/hus/contents2016.htm#mentalhealth)
+
 
 ## Finding 2:  Male and female are remarkably different in choosing their college majors, as a result, there is wage gap between gender.
 
@@ -158,8 +158,8 @@ There are three business-related fields of study in top ten majors, including Bu
 1 When try to find reasons for popular majors by year, at first we feel reason for different year period maybe same one, such as income. However when we went deeply of data, we found our society and humanity are more complicated than we thought. Then we found motivation for people to choose major are tight tie to social background. Therefore we explained them separately. 
 
 2 At first we think people want to learn business related major were because high payment or unemployment. But in dataset we found, income in business field was even below average in that year. Also unemployment rate of business field were almost same as average rate, no clear superiority showed. Then we found reasons for people study business were multiple complex. Here we only show the most dominant one but we can see even after stagflation business was still hot. After read papers, we think this still related to reasons such as baby boom period, degree of difficulty and maybe wide occupation choices after graduate.
-[reference: https://www.wallstreetprep.com/knowledge/salary-and-unemployment-rate-by-college-major/]
-[http://www.naceweb.org/job-market/compensation/salary-trends-through-salary-survey-a-historical-perspective-on-starting-salaries-for-new-college-graduates/]
+[6](https://www.wallstreetprep.com/knowledge/salary-and-unemployment-rate-by-college-major/)
+[7](http://www.naceweb.org/job-market/compensation/salary-trends-through-salary-survey-a-historical-perspective-on-starting-salaries-for-new-college-graduates/)
 
 ### Improvement 
 1 For finding one, we see overall view by year. We still want to explore popular majors by states and to get a more macro view.
@@ -173,5 +173,22 @@ There are three business-related fields of study in top ten majors, including Bu
 1. Financing Education, Max Roser and Esteban Ortiz-Ospina
 https://ourworldindata.org/financing-education
 
+2. Women in Vietnam War
+https://www.history.com/topics/vietnam-war/women-in-the-vietnam-war
 
-Zafar B. (2009). College major choice and the gender gap, Staff Report, Federal Reserve Bank of New York, No. 364, Federal Reserve Bank of New York, New York, NY. Retrieved from https://www.newyorkfed.org/medialibrary/media/research/staff_reports/sr364.pdf  
+3. The Hippie movement was a Psychological Operation
+https://ibizatimes.wordpress.com/2015/03/02/the-hippie-movement-was-a-psychological-operation/
+
+4. Barry Nielsen(2017). Stagflation, 1970s Style
+https://www.investopedia.com/articles/economics/08/1970-stagflation.asp
+
+5. Health, United States, 2016 
+https://www.cdc.gov/nchs/hus/contents2016.htm#mentalhealth
+
+6. Salary and unemployment rate, by college major
+https://www.wallstreetprep.com/knowledge/salary-and-unemployment-rate-by-college-major/
+
+7. Andrea Koncz(2016). SALARY TRENDS THROUGH SALARY SURVEY: A HISTORICAL PERSPECTIVE ON STARTING SALARIES FOR NEW COLLEGE GRADUATES
+http://www.naceweb.org/job-market/compensation/salary-trends-through-salary-survey-a-historical-perspective-on-starting-salaries-for-new-college-graduates/
+
+8. Zafar B. (2009). College major choice and the gender gap, Staff Report, Federal Reserve Bank of New York, No. 364, Federal Reserve Bank of New York, New York, NY. Retrieved https://www.newyorkfed.org/medialibrary/media/research/staff_reports/sr364.pdf  
