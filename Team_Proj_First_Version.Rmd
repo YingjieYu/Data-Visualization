@@ -82,5 +82,5 @@ After found popular majors during years, we tried to find claims for them to exp
 
 ## Finding 2:  Male and female are remarkably different in choosing their college majors, as a result, there is wage gap between gender.
 
-![](images/finding2-1)
+![](images/finding2-1.png)
 
