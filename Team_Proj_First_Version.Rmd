@@ -157,13 +157,13 @@ tmp <- merge(tmp,occupation, by  = 'occupation_code')%>%filter(occupation_code>0
 ### 3.4 Reasoning
 There are three business-related fields of study in top ten majors, including Business Management and Administration, General Business and Accounting. Graduates from Nursing, Elementary Education, General Education and Biology are concentrated in one or two industries, while those who studied business in college tend to have a wider variety in choosing occupations. 
 
-This could be explained by the common sense that almost every company or institution will hire business-major graduates to manage funds, initiate marketing and promotion, and maintain efficient operation. Thus, business graduates are not only in need in industries that provide financial and consulting services, but also in almost all other fields such as health care, entertainment, construction, education and etc. In contrast, people major in Nursing and Education are trained more career-oriented that the occupations they take are restricted in the area of healthcare and educational service respectively. This may be the reason why business and management degrees are so popular in the U.S. over the past eight decades as such majors open doors to more careers than other undergraduate majors.
+This could be explained by the fact that regardless of industry, almost every company or institution will hire business-major graduates to manage funds, initiate marketing, and maintain efficient operation while rely on business principles to prosper (Schweitzer 2018)[6](https://www.thoughtco.com/reasons-to-become-a-business-major-467074). Thus, business graduates are not only in need in industries that provide financial and consulting services, but also in almost all other fields such as health care, entertainment, construction, education and etc. In contrast, people major in Nursing and Education are trained more career-oriented that the occupations they take are restricted in the area of healthcare and educational service respectively. This may be the reason why business and management degrees are so popular in the U.S. over the past eight decades as such majors open doors to more careers than other undergraduate majors.
 
 ## Detours and Future Improvements:
 ### Detours
 1. When try to find reasons for popular majors by year, at first we feel reason for different year period maybe same one, such as income. However when we went deeply of data, we found our society and humanity are more complicated than we thought. Then we found motivation for people to choose major are tight tie to social background. Therefore we explained them separately. 
 
-2. At first we think people want to learn business related major were because high payment or unemployment. But in dataset we found, income in business field was even below average in that year (Andrea Koncz, 2016)[6](https://www.wallstreetprep.com/knowledge/salary-and-unemployment-rate-by-college-major/)Also unemployment rate of business field were almost same as average rate, no clear superiority showed (Wall Street Prep)[7](http://www.naceweb.org/job-market/compensation/salary-trends-through-salary-survey-a-historical-perspective-on-starting-salaries-for-new-college-graduates/)Then we found reasons for people study business were multiple complex. Here we only show the most dominant one but we can see even after stagflation business was still hot. After read papers, we think this still related to reasons such as baby boom period, degree of difficulty and maybe wide occupation choices after graduate. 
+2. At first we think people want to learn business related major were because high payment or unemployment. But in dataset we found, income in business field was even below average in that year (Andrea Koncz, 2016)[7](https://www.wallstreetprep.com/knowledge/salary-and-unemployment-rate-by-college-major/)Also unemployment rate of business field were almost same as average rate, no clear superiority showed (Wall Street Prep)[8](http://www.naceweb.org/job-market/compensation/salary-trends-through-salary-survey-a-historical-perspective-on-starting-salaries-for-new-college-graduates/)Then we found reasons for people study business were multiple complex. Here we only show the most dominant one but we can see even after stagflation business was still hot. After read papers, we think this still related to reasons such as baby boom period, degree of difficulty and maybe wide occupation choices after graduate. 
 
 ### Improvement 
 1. For finding one, we see overall view by year. We still want to explore popular majors by states and to get a more macro view.
@@ -188,13 +188,16 @@ https://www.investopedia.com/articles/economics/08/1970-stagflation.asp
 5. National Center for Health Statistics - ‘Health, United States, 2016 - Individual Charts and Tables: Spreadsheet, PDF, and PowerPoint files’.
 https://www.cdc.gov/nchs/hus/contents2016.htm#mentalhealth
 
-6. Andrea Koncz (2016) - ‘Salary trends through salary survey’.
+6. Schweitzer K. (2018)Reasons to Choose a Business Major. 
+https://www.thoughtco.com/reasons-to-become-a-business-major-467074
+
+7. Andrea Koncz (2016) - ‘Salary trends through salary survey’.
 http://www.naceweb.org/job-market/compensation/salary-trends-through-salary-survey-a-historical-perspective-on-starting-salaries-for-new-college-graduates/
 
-7. Wall Street Prep - ‘Salary and unemployment rate, by college major’.
+8. Wall Street Prep - ‘Salary and unemployment rate, by college major’.
 https://www.wallstreetprep.com/knowledge/salary-and-unemployment-rate-by-college-major/
 
-8. Perry M.(2017). Table of the day: Bachelor’s degrees by field and gender for the Class of 2015. AEI
+9. Perry M.(2017). Table of the day: Bachelor’s degrees by field and gender for the Class of 2015. AEI
 http://www.aei.org/publication/table-of-the-day-bachelors-degrees-by-field-and-gender-for-the-class-of-2015/
 
-9. Zafar B. (2009). College major choice and the gender gap, Staff Report, Federal Reserve Bank of New York, No. 364, Federal Reserve Bank of New York, New York, NY. Retrieved https://www.newyorkfed.org/medialibrary/media/research/staff_reports/sr364.pdf  
+10. Zafar B. (2009). College major choice and the gender gap, Staff Report, Federal Reserve Bank of New York, No. 364, Federal Reserve Bank of New York, New York, NY. Retrieved https://www.newyorkfed.org/medialibrary/media/research/staff_reports/sr364.pdf  
