@@ -59,7 +59,7 @@ In this chart we show trend of top 6 majors over 80 years. Those majors can be d
 
 ![](images/finding1-1.png)
 
-Tableau Link: * https://public.tableau.com/profile/zhonghe.han#!/vizhome/Finding1_0/Dashboard1
+Tableau Link: https://public.tableau.com/profile/zhonghe.han#!/vizhome/Finding1_0/Dashboard1
 
 ### 1.1 Development Process: 
 For we want to see trend of majors by year, here we use year as x axis and sum count of each majors as y axis. Since we have many majors, we chose top 6 majors that with most counts aggregated by 80 years.  The reason that we chose top 6 but not 5 is we found the sixth is nursing which can help explain trend of psychology, we will explain it later. 
@@ -67,7 +67,7 @@ For we want to see trend of majors by year, here we use year as x axis and sum c
 ### 1.2 Reasoning：
 After found popular majors during years, we tried to find claims for them to explain why they are popular in specific time period. Finally we found why people choose some majors tie close to social and culture events during those years. 
 
-1. From graph we can see education once was the most popular major for almost 40 years. Through reading essays we found investment in education had a huge increase after world war. According to those papers, recruitment difficulty of world war made America government feel the lack of popularity in education so after war both local and state government increase investment percentage of GDP on education.From chart below we can see two peaks in 1935 and 1970, and it increasing fast both from 1920 and 1940 which were exactly year after world war I and  Ⅱ. This can explain why education became most popular major during 1935 to 1970, for more school and opportunities in education field were created, it would be easier to find a job if people study education^1^. [reference: https://ourworldindata.org/financing-education] 
+1. From graph we can see education once was the most popular major for almost 40 years. Through reading essays we found investment in education had a huge increase after world war. According to those papers, recruitment difficulty of world war made America government feel the lack of popularity in education so after war both local and state government increase investment percentage of GDP on education.From chart below we can see two peaks in 1935 and 1970, and it increasing fast both from 1920 and 1940 which were exactly year after world war I and  Ⅱ. This can explain why education became most popular major during 1935 to 1970, for more school and opportunities in education field were created, it would be easier to find a job if people study education. [reference-1] [1]
 
 ![](images/finding1-2.png)
 
@@ -169,4 +169,5 @@ There are three business-related fields of study in top ten majors, including Bu
 
 
 ## References:
+[1]: https://ourworldindata.org/financing-education "Financing Education, Max Roser and Esteban Ortiz-Ospina"
 Zafar B. (2009). College major choice and the gender gap, Staff Report, Federal Reserve Bank of New York, No. 364, Federal Reserve Bank of New York, New York, NY. Retrieved from https://www.newyorkfed.org/medialibrary/media/research/staff_reports/sr364.pdf  
