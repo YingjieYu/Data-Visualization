@@ -103,3 +103,18 @@ Combining with our finding 2 that women prefered major in lower-earning field, s
 
 ## Finding 3: Business-related majors are popular over the years since business graduates can work in a wider variety of occupations.
 
+### 3.1 Description
+
+![](images/finding3-1.png)
+This graph presents the total count of the top ten majors over the past 8 decades. 
+![](images/finding3-2.png)
+This graph shows the distribution of occupations for the top ten majors.
+
+### 3.2 Development Process
+Based on the Finding #1, business-related majors are quite popular over the past few decades, no matter whether there is a recession or not. To explore the reason why business majors are favored by so many people, we look at the occupations of college graduates for the top 10 majors. For clarity, we only select those occupations with more than 2000 people for each major and omit minor categories. Each stacked bar represents a major with different colors for corresponding occupations. The full title for each category is listed below:
+
+Abbreviation | Full Title
+-------------| -------------
+MFG | Manufacturing
+SCA | Social Assistance 
+
