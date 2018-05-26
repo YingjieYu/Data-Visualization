@@ -1,10 +1,5 @@
----
-title: "Team_first_version"
-author: Zhonghe Han, Tianmi Li, Yingjie Yu, Feng Wang, Jieyi Deng
-
----
-
 # First Version Team Project -- College Education
+## Author: Zhonghe Han, Tianmi Li, Yingjie Yu, Feng Wang, Jieyi Deng
 ## Introduction 
 This project is looking at college education related data to see how college education changes over time and how does it affect people. Specifically, we are looking at the following research questions:
 1. What college majors are trending over years?
