@@ -170,4 +170,5 @@ There are three business-related fields of study in top ten majors, including Bu
 
 ## References:
 [1]: https://ourworldindata.org/financing-education "Financing Education, Max Roser and Esteban Ortiz-Ospina"
+![Financing Education][1]
 Zafar B. (2009). College major choice and the gender gap, Staff Report, Federal Reserve Bank of New York, No. 364, Federal Reserve Bank of New York, New York, NY. Retrieved from https://www.newyorkfed.org/medialibrary/media/research/staff_reports/sr364.pdf  
