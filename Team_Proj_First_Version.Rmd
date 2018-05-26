@@ -54,17 +54,17 @@ census = census[,c("ST","FOD1P","SCH","SCHG","SCHL","INDP","NAICSP","SEX","RAC1P
 
 
 ## Finding 1:  Elementary Education, General Education, Business, Nursing and Psychology are the most popular majors from 1935 to 2008.
-*Description: *
+### Description: 
 In this chart we show trend of top 6 majors over 80 years. Those majors can be divided into four category: Education, Business, Nursing and Psychology. From chart we can see the most popular major category during 1935 and 1970 is education, and it arrives peak in 1970; also though are not the most popular, psychology and nursing arrive their peak during 1961 and 1975; then it comes to business, between 1975 and 2000 two business majors increasing so fast that became top majors during those year and arrive their peaks in 1980; finally after 2000 psychology became the most popular major. 
 
 ![](images/finding1-1.png)
 
-*Tableau Link: * https://public.tableau.com/profile/zhonghe.han#!/vizhome/Finding1_0/Dashboard1
+Tableau Link: * https://public.tableau.com/profile/zhonghe.han#!/vizhome/Finding1_0/Dashboard1
 
-*Development Process: *
+### Development Process: 
 For we want to see trend of majors by year, here we use year as x axis and sum count of each majors as y axis. Since we have many majors, we chose top 6 majors that with most counts aggregated by 80 years.  The reason that we chose top 6 but not 5 is we found the sixth is nursing which can help explain trend of psychology, we will explain it later. 
 
-*Reasoning：*
+### Reasoning：
 After found popular majors during years, we tried to find claims for them to explain why they are popular in specific time period. Finally we found why people choose some majors tie close to social and culture events during those years. 
 
 1. From graph we can see education once was the most popular major for almost 40 years. Through reading essays we found investment in education had a huge increase after world war. According to those papers, recruitment difficulty of world war made America government feel the lack of popularity in education so after war both local and state government increase investment percentage of GDP on education.From chart below we can see two peaks in 1935 and 1970, and it increasing fast both from 1920 and 1940 which were exactly year after world war I and  Ⅱ. This can explain why education became most popular major during 1935 to 1970, for more school and opportunities in education field were created, it would be easier to find a job if people study education. [reference: https://ourworldindata.org/financing-education] 
@@ -80,5 +80,7 @@ After found popular majors during years, we tried to find claims for them to exp
 ![](images/finding1-3.png)
 [references: https://www.cdc.gov/nchs/hus/contents2016.htm#mentalhealth]
 
-### Finding 2:  Male and female are remarkably different in choosing their college majors, as a result, there is wage gap between gender.
+## Finding 2:  Male and female are remarkably different in choosing their college majors, as a result, there is wage gap between gender.
+
+![](images/finding2-1)
 
