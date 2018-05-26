@@ -10,6 +10,20 @@ author: Zhonghe Han, Tianmi Li, Yingjie Yu, Feng Wang, Jieyi Deng
 
 ### Data Source and Cleaning
 
+```{r}
+library(data.table)
+census1 = fread('ss16pusa.csv')
+census1 = census1[,c("ST","ADJINC","FOD1P","SCH","SCHG","SCHL","INDP","NAICSP","SEX","RAC1P","PINCP","AGEP","CITWP","COW","SERIALNO")]
+census2 = fread('ss16pusb.csv')
+census2 = census2[,c("ST","ADJINC","FOD1P","SCH","SCHG","SCHL","INDP","NAICSP","SEX","RAC1P","PINCP","AGEP","CITWP","COW","SERIALNO")]
+census3 = fread('ss16pusc.csv')
+census3 = census3[,c("ST","ADJINC","FOD1P","SCH","SCHG","SCHL","INDP","NAICSP","SEX","RAC1P","PINCP","AGEP","CITWP","COW","SERIALNO")]
+census4 = fread('ss16pusd.csv')
+census4 = census4[,c("ST","ADJINC","FOD1P","SCH","SCHG","SCHL","INDP","NAICSP","SEX","RAC1P","PINCP","AGEP","CITWP","COW","SERIALNO")]
+census = rbind(census1, census2, census3, census4)
+```
+
+
 ### Finding 1:  Elementary Education, General Education, Business, Nursing and Psychology are the most popular majors from 1935 to 2010
 *Description: *
 In this chart we show trend of top 6 majors over 80 years. Those majors can be divided into four category: Education, Business, Nursing and Psychology. From chart we can see the most popular major category during 1935 and 1970 is education, and it arrives peak in 1970; also though are not the most popular, psychology and nursing arrive their peak during 1961 and 1975; then it comes to business, between 1975 and 2000 two business majors increasing so fast that became top majors during those year and arrive their peaks in 1980; finally after 2000 psychology became the most popular major. 
