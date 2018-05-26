@@ -67,7 +67,7 @@ For we want to see trend of majors by year, here we use year as x axis and sum c
 ### 1.2 Reasoning：
 After found popular majors during years, we tried to find claims for them to explain why they are popular in specific time period. Finally we found why people choose some majors tie close to social and culture events during those years. 
 
-1. From graph we can see education once was the most popular major for almost 40 years. Through reading essays we found investment in education had a huge increase after world war. According to those papers, recruitment difficulty of world war made America government feel the lack of popularity in education so after war both local and state government increase investment percentage of GDP on education.From chart below we can see two peaks in 1935 and 1970, and it increasing fast both from 1920 and 1940 which were exactly year after world war I and  Ⅱ. This can explain why education became most popular major during 1935 to 1970, for more school and opportunities in education field were created, it would be easier to find a job if people study education. [reference: https://ourworldindata.org/financing-education] 
+1. From graph we can see education once was the most popular major for almost 40 years. Through reading essays we found investment in education had a huge increase after world war. According to those papers, recruitment difficulty of world war made America government feel the lack of popularity in education so after war both local and state government increase investment percentage of GDP on education.From chart below we can see two peaks in 1935 and 1970, and it increasing fast both from 1920 and 1940 which were exactly year after world war I and  Ⅱ. This can explain why education became most popular major during 1935 to 1970, for more school and opportunities in education field were created, it would be easier to find a job if people study education^1^. [reference: https://ourworldindata.org/financing-education] 
 
 ![](images/finding1-2.png)
 
@@ -117,4 +117,56 @@ Abbreviation | Full Title
 -------------| -------------
 MFG | Manufacturing
 SCA | Social Assistance 
+ENT | Entertainment
+CON | Construction
+ADM | Administration
+FIN | Finance
+PRF | 
+MED | Health Care
+EDU | Educational Services
 
+### 3.3 Data Wrangling
+
+```{r}
+edu = fread('census_final.csv')
+major = fread('major_code.csv')
+names(major) <- c('major_code','major')
+occupation <- fread('NAICSP.csv')
+occupation <- occupation[,c(1,2)]
+names(occupation)<-c('occupation_code','occupation')
+occupation=separate(data=occupation,col = 2, into = c("occupation", "occu"), sep = "\\-")
+```
+```{r}
+top_major <- edu %>% group_by(FOD1P)%>% summarize(n=n()) %>%arrange(desc(n))
+top_major<- top_major[1:10,1]
+
+tmp<- edu %>% group_by(FOD1P,NAICSP) %>% summarize(n=n()) %>%filter(!is.na(NAICSP))%>%filter(FOD1P %in% top_major$FOD1P )
+
+names(tmp)<-c('major_code','occupation_code','count')
+
+tmp <- merge(tmp,major, by = 'major_code')
+tmp <- merge(tmp,occupation, by  = 'occupation_code')%>%filter(occupation_code>0)%>%filter(count>2000)
+```
+
+### 3.4 Reasoning
+There are three business-related fields of study in top ten majors, including Business Management and Administration, General Business and Accounting. Graduates from Nursing, Elementary Education, General Education and Biology are concentrated in one or two industries while those who studied business majors in college tend to have a wider variety in choosing occupations. 
+
+
+## Detours and Future Improvements:
+### Detours
+1 When try to find reasons for popular majors by year, at first we feel reason for different year period maybe same one, such as income. However when we went deeply of data, we found our society and humanity are more complicated than we thought. Then we found motivation for people to choose major are tight tie to social background. Therefore we explained them separately. 
+
+2 At first we think people want to learn business related major were because high payment or unemployment. But in dataset we found, income in business field was even below average in that year. Also unemployment rate of business field were almost same as average rate, no clear superiority showed. Then we found reasons for people study business were multiple complex. Here we only show the most dominant one but we can see even after stagflation business was still hot. After read papers, we think this still related to reasons such as baby boom period, degree of difficulty and maybe wide occupation choices after graduate.
+[reference: https://www.wallstreetprep.com/knowledge/salary-and-unemployment-rate-by-college-major/]
+[http://www.naceweb.org/job-market/compensation/salary-trends-through-salary-survey-a-historical-perspective-on-starting-salaries-for-new-college-graduates/]
+
+### Improvement 
+1 For finding one, we see overall view by year. We still want to explore popular majors by states and to get a more macro view.
+
+2 For finding two, we see the income difference by majors/specialized majors, but not separate by gender. We will analyze income difference by major and by gender in the future. In addition, we find that the total number of women majoring in science, technology, and mathematics are very close to the total number of men majoring in these fields. The only difference in STEM field is engineering. Related to the recent movement that promoting women working in STEM industry, we wonder if there are relation between women major in STEM and women work in STEM.
+
+3 For finding three, we claim business-related majors keep being popular over years by showing career choices for the 10 most majors and concentrate on occupation variety for those major. In order to figure out reason, we could take more factor into consideration, such as  income stability, income level and gender gap in major.
+
+
+## References:
+Zafar B. (2009). College major choice and the gender gap, Staff Report, Federal Reserve Bank of New York, No. 364, Federal Reserve Bank of New York, New York, NY. Retrieved from https://www.newyorkfed.org/medialibrary/media/research/staff_reports/sr364.pdf  
