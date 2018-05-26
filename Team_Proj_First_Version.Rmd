@@ -61,10 +61,10 @@ In this chart we show trend of top 6 majors over 80 years. Those majors can be d
 
 Tableau Link: * https://public.tableau.com/profile/zhonghe.han#!/vizhome/Finding1_0/Dashboard1
 
-### Development Process: 
+### 1.1 Development Process: 
 For we want to see trend of majors by year, here we use year as x axis and sum count of each majors as y axis. Since we have many majors, we chose top 6 majors that with most counts aggregated by 80 years.  The reason that we chose top 6 but not 5 is we found the sixth is nursing which can help explain trend of psychology, we will explain it later. 
 
-### Reasoning：
+### 1.2 Reasoning：
 After found popular majors during years, we tried to find claims for them to explain why they are popular in specific time period. Finally we found why people choose some majors tie close to social and culture events during those years. 
 
 1. From graph we can see education once was the most popular major for almost 40 years. Through reading essays we found investment in education had a huge increase after world war. According to those papers, recruitment difficulty of world war made America government feel the lack of popularity in education so after war both local and state government increase investment percentage of GDP on education.From chart below we can see two peaks in 1935 and 1970, and it increasing fast both from 1920 and 1940 which were exactly year after world war I and  Ⅱ. This can explain why education became most popular major during 1935 to 1970, for more school and opportunities in education field were created, it would be easier to find a job if people study education. [reference: https://ourworldindata.org/financing-education] 
@@ -83,4 +83,23 @@ After found popular majors during years, we tried to find claims for them to exp
 ## Finding 2:  Male and female are remarkably different in choosing their college majors, as a result, there is wage gap between gender.
 
 ![](images/finding2-1.png)
+
+### 2.1 Description
+College education is a major investment in lifetime. Women increasingly participated in college education over years, and the total number of women’s degree holders outweighed the total number of men’s since 1980s (cite, need graph?). However, in term of major preference, male and female were remarkably different: female students were more likely to choose Elementary/General Education and Nursing as their majors, while male students prefered Business-related majors, as showed in the graph above. As a result, there is a wage gap between genders because most men choose to major in the higher-income field of studies.
+
+### 2.2 Development Process
+After looking the overall popular majors, we explored the top 6 popular majors between genders. To explore major preference in gender, we grouped the processed data file (“census_final + merge with major_category”) by major and gender to summarize count of major. We choose the top 6 popular majors  in total counts to analyze since it’s consistent with the previous finding, and we think it’s worth to further explore the most popular majors in the perspective of gender.
+
+### 2.3 Explanation and Impacts on Wage Gap
+According to the Staff Report of Federal Reserve Bank of New York, gender difference in choosing majors could be explained by two factors: innate abilities and diverge preferences (Zafar 2009). More specifically, when considering major options, female student pay much attention to non-pecuniary outcomes, such as gaining approval of parents and enjoying work at jobs, while male students emphasize pecuniary outcomes, namely social status of the jobs, likelihood of finding a job, and earnings profiles at future jobs (2009). As a result, “differences in major account for a substantial part of the gender gap in the earnings of individuals with several years of college education” (2009 ).
+The literature is consistent with what we are finding. From the data, we generated the average mean income by specialized category of majors (which aggregated 170 majors into 15 border categories by ACS) during early as well as mid career phase. Also, we highlighted the general category into four colors as legends.  From the graph, we concluded that major in the field of science and engineering, and business would generate higher income than majoring in the field of education and liberal arts during early career: the mean income for engineering major students is around $50,000 while for education major students is only about $32,000 during early career. 
+
+![](images/finding2-2.png)
+
+The income gap became even wider when analyzing the mid-career income by majors (graph): major in education is the lowest category in term of mid-career income levels, while students major in engineering increased their income more than double.
+
+![](images/finding2-3.png)
+Combining with our finding 2 that women prefered major in lower-earning field, such as Education, while men concentrated in higher-earning field of majors, we can easily conclude that gender difference in major is one of driver for gender income gap.
+
+## Finding 3: Business-related majors are popular over the years since business graduates can work in a wider variety of occupations.
 
