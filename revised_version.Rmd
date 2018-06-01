@@ -1,0 +1,241 @@
+
+<style type="text/css"> body{ /* Normal */ font-size: 14px; } </style>
+
+```{r include=FALSE, cache=FALSE, warning=FALSE, out.width = "50%"}
+library(data.table)
+library(plotly)
+library(ggplot2)
+library(tm)
+library(knitr)
+library(readr)
+
+```
+
+# Individual Project - Revised Version
+## Yingjie Yu 00001430842
+
+# 1 Redesign
+## 1.1 Finding 1: The stricter the gun control law, the fewer the gun death, but not necessarily the fewer homicide rate.
+### 1.1.1 Description:
+The article claims that “states with tighter gun control laws have fewer gun-related deaths” and it illustrates that by plotting number of deaths for each state, with shadowing states with at least 1 firearm law. Audience may infer from this claim that because of the positive relationship between number of deaths and strictness of gun control laws, tightening firearm related law could be an approach to lower gun-related deaths for local governments. However, ignoring type differences within gun deaths is not a justified way to discuss such relationship, because some kind of gun deaths such as suicide are inherently correlated with gun death. Therefore, having a closer look at gun death and explore whether tighter gun control law encourage different types of firearm deaths is a better way to illustrate the influence of gun control law.
+
+The original plot:
+Original Plot:
+```{r warning=FALSE, out.width = "50%"}
+include_graphics("https://cdn.vox-cdn.com/thumbor/hEkb1_ALXVxh912Th6uwScMM_pg=/0x0:550x425/1520x0/filters:focal(0x0:550x425):format(webp)/cdn.vox-cdn.com/uploads/chorus_asset/file/9371423/gun_control_vs_deaths.jpg")
+```
+
+The problem with the original plot:
+
+- It does not suggest how tight the gun control laws are. 
+- It fails to support the argument that states with tighter gun control laws have fewer gun-related deaths, because about half of shadowed stated have near-median number of deaths due to firearm.
+- The map has low data pixel ratio and is inefficient.
+
+Considering that suicide and homicide constitute more than 90% of firearm-related deaths(U.S. Department of Justice, 2013)[1](https://www.cdc.gov/nchs/data/nvsr/nvsr64/nvsr64_02.pdf), I looked at the trends of those two type accordingly. Meanwhile, I defined the strictness of gun-control law for each state as the number of gun-control laws in 2016.  I firstly drew bar plots showing number of gun-related laws, firearm death rate, suicide rate and homicide rate.  I grouped firearm death rate and suicide rate together as they two show a similar pattern. Then trend lines and corresponding statistics are added as they can further illustrates relationships. 
+
+### 1.1.2 The redesigned plot:
+### 1.1.2 The redesigned plot:
+```{r warning=FALSE}
+knitr::include_graphics("revised-finding-1.png")
+```
+
+From the plot, we can conclude that while higher number of  gun laws is associated with few suicide deaths and firearm death in general, it does not encourage lower homicide rate. The trend line and statistics approve it. From the perspective of lowering gun death, focusing only on putting tighter gun control law may be not justified. It will make more sense to put efforts on dealing with suicide issue such as improving social mental health.
+
+### 1.1.3 Improvement from first version to revised version
+The first version of redesigned:
+```{r warning=FALSE, out.width = "50%"}
+knitr::include_graphics("1st-finding-1-1.png")
+knitr::include_graphics("1st-finding-1-2.png")
+```
+
+Problems with this plot that I fixed in the revised version are:
+
+- Removing map plots which show only fact but not any supportive argument.
+- Removing unnecessary graduated color.
+- The bar plot has different scale for different dimensions, it is not appropriate  to put them together.
+- No actionable advice could be inferred. By breaking down firearm deaths and checking statistical support, we could focus specifically on suicide issue if we want to take measures to lower gun death rate.  
+
+## 1.2 Finding 2: The United States’s stands out mass shooting frequency
+### 1.2.1 Description:
+In the provided article, discussion about mass public shooting was limited to the number and distribution of mass shooting in U.S. It did not give an worldwide comparison to illustrate how severe mass shooting is in US, so audience can not decide whether mass shooting is a US-unique issue or not. Therefore, it make sense to address mass shooting question by adding comparison to gauge severity of mass shooting. Besides, listing fact numbers of mass shooting gives no clue on what leads to severe mass shooting events or what measures may take to solve mass shooting, which is another limitation of original plots. The original plot supporting the claim that “On average, there is around one mass shooting for each day in America” also has limitation, it focus only on 2015, ignoring the possibility that 2015 might be a specific year that is not typical from other year.
+To illustrate mass shooting issue better, I firstly made comparison among US, UK, Canada and some European countries to show how severe that issue is in US and then further checked the year and month distribution in an extended period.
+
+Data Wrangling:
+```{r warning=FALSE, out.width = "50%"}
+
+
+MS_dataset <- read_csv("Mass Shootings Dataset Ver 5.csv"
+                              , col_types = cols(Date = col_date(format = "%m/%d/%Y")))
+MS_dataset <- data.table(MS_dataset)
+
+MS_dataset[,Month:=as.factor(month(Date))]
+MS_dataset[,Year_n:=as.numeric(year(Date))]
+MS_dataset[,Year:=as.factor(year(Date))]
+
+# plot_ly(data = MS_dataset
+#         ,type = 'scatter'
+#         ,mode = 'markers' 
+#         ,hoverinfo = 'text'
+#         ,x = ~Month
+#         ,y = ~Year
+#         ,size = ~`Total victims`
+#         ,alpha = 0.6
+#         ,text = ~paste("Location: ", Location
+#                ,'\n Date: ', Date 
+#                ,'\n Total victims : ', `Total victims` 
+#                ,'\n Fatalities : ', Fatalities
+#                ,'\n Injured : ', Injured)) %>% 
+#   layout(title = "Mass Shootings in US by years and month"
+#          , xaxis = list(title = "Month")
+#          , yaxis = list(title = "Years"))
+
+
+f1 <- list(family = "Arial, sans-serif",size = 14,color = "grey")
+f2 <- list(family = "Old Standard TT, serif",size = 12,color = "black")
+
+# Axis settings
+ax <- list(title = "Month",titlefont = f1,showticklabels = TRUE,tickangle = 0,tickfont = f2,exponentformat = "E")
+
+ay <- list(title = "Year",titlefont = f1,showticklabels = TRUE,tickangle = 0,tickfont = f2,exponentformat = "E")
+
+b1 <- list(text = "Total victims",font = f1,xref = "paper",yref = "paper",yanchor = "bottom",xanchor = "center",align = "center",x = 0.5,y = 1,showarrow = FALSE)
+
+hm1 <- plot_ly(data = MS_dataset
+        ,type = 'heatmap'
+        ,colors = colorRamp(c("yellow", "blue", "darkred"))
+        ,x = ~Month
+        ,y = ~Year
+        ,z = ~`Total victims`)%>%layout(showlegend = T
+         , xaxis = ax
+         , yaxis = ay
+         , annotations = b1)
+```
+### 1.1.2 The redesigned plot:
+```{r warning=FALSE, out.width = "50%"}
+knitr::include_graphics("revised-finding-2.png")
+subplot(hm1)
+```
+
+
+
+The upper plot tells us that the United States stands out among countries for the frequency with which its mass shootings occur and one variable that can explain the high rate of mass shootings in America is its astronomical number of guns. A country’s rate of gun ownership correlated with the odds it would experience a mass shooting(Adam Lankford, 2016)[2](https://www.ncbi.nlm.nih.gov/pubmed/26822013), even though there is only a few counties that have very high mass shooting records, we can still see such relationship by looking at Norway and France.
+
+The plot also confirms the fact that there is no a high volume time for mass shooting, and therefore supports the opinion that “it will just about never be the right time to discuss gun control”. We can also conclude from the plot that mass shooting in US tends to be more severe and frequent, which should give alarm to local authorities.
+
+### 1.2.3 Improvement from first version to revised version
+The first version of redesigned:
+```{r warning=FALSE, out.width = "50%"}
+knitr::include_graphics("1st-finding-2.png")
+```
+
+Problems with this plot that I fixed in the revised version are:
+
+- The most severe problem with this plot is that it uses unjustified variable, which is average frequency of mass shooting per million capita. Mass shooting is a very special issue and each event has influence over whole country, therefore  discussing mass shooting problem on a per capita basis just makes it seems less concerning and is misleading. Using per-existence rather than per-capita variable for mass shooting is more appropriate.
+- The second problem is that the plot does not provide metrics to provide explanation. By adding gun-ownership rate, we could have more clue regarding what lead to mass shooting.
+- Putting US besides the highest one is somehow deceptive
+
+# 2 Deceptive Version
+
+In this report, I chose three claim from the original article and their corresponding plots, which I think would generate misunderstandings when being illustrated in deceptive ways. The original plots and deceptive plots are using almost the same data source but are shown in either different dimensions or different metics.
+
+## 2.1 Claim 1: America has six times as many firearm homicides as Canada, and nearly 16 times as many as Germany
+### 2.1.1 From original plots to deceptive plots
+Original Plot:
+```{r warning=FALSE, out.width = "50%"}
+include_graphics("https://cdn.vox-cdn.com/thumbor/Mu8atIOWulSS_ztu2cphOxgFsj4=/0x0:800x1571/1720x0/filters:focal(0x0:800x1571):format(webp)/cdn.vox-cdn.com/uploads/chorus_asset/file/10228297/gun_homicides_per_capita.jpg")
+
+```
+
+This plot intends to tell us how severe the firearm homicide is in US, compared with other developed countries. However, there are several problem with this plot.
+
+- It does not provide explanation for choosing those 14 countries. As we know, there are 34 developed countries in the world and most of them have a compeletely different gun control situation from U.S..
+- A huge part of developed countries have strict gun control. Therefore, directly making comparison of firearm homicide rate may be not make any sense.
+```{r warning=FALSE, out.width = "80%"}
+knitr::include_graphics("deceptive-1.png")
+```
+
+Here is plot from another point of view. When taking counties that have high gun ownerhship rate into consideration, we can see that even though US has been critized by its high gun ownership, it dose not ranks tops in both firearm homicide rate. Furthermore, when taking gun ownership rate into consideration, we can find that US still does not show up in terms of homicide to gun ownership rate. 
+
+### 2.1.2 From first version to revised version
+First version plot:
+```{r warning=FALSE, out.width = "50%"}
+knitr::include_graphics("1.png")
+```
+
+Problem with this plot that I fixed in the revised version is:
+
+- Making comparison directly among all developed countries might not be justifies. As we know, most of those countries have strict gun contrl policies. It could give us more comprehension if we make comparison based on countries that have high gun ownership.
+
+## 2.2 Claim 6: It’s not just the US: Developed countries with more guns also have more gun deaths
+### 2.2.1 From original plots to deceptive plots
+
+Original Plot:
+```{r warning=FALSE, out.width = "50%"}
+include_graphics( "https://cdn.vox-cdn.com/thumbor/55GPsm0JuIf0u68No9CVtqBLPuk=/0x0:3840x2794/1720x0/filters:focal(0x0:3840x2794):format(webp)/cdn.vox-cdn.com/uploads/chorus_asset/file/10328765/GUN_SCATTERPLOT_2x.png")
+```
+
+From this plot we can intuitively inference that the higher the gun ownership rate, the higher the gun death. However, taking a further step of thought, we can find several issues:
+
+- When taking United States out of the plot, the relation is not necessarily straightforward and obvious, which is contrary to the claim “It’s not just the US”.
+- Gun-related death may not be a good metric to evaluate death rate because and gun-related death can be varies as homicide and suicide, as we mentioned above. Therefore, using a more specific death rate such as homicide rate should be more reasonable.
+- Fitted line is added but no significance information id provided.
+
+Deceptive Plot:
+```{r out.width = "60%"}
+knitr::include_graphics("deceptive-2.png")
+```
+
+Here we can see from the plot of gun ownership rate vs. three kind of gun-related rates for developed countries, and focus on "It’s not just the US"(keepin US out). Only firearm suicide rate has significant potitive relationship with gun ownership. Neither homicide or general gun-deaths has significant relation with gun ownership, which is contrary to the original claim. 
+
+### 2.2.2 From first version to revised version
+```{r warning=FALSE, out.width = "40%"}
+knitr::include_graphics("2.1.png")
+knitr::include_graphics("2.2.png")
+knitr::include_graphics("2.3.png")
+```
+
+Problems with this plot that I fixed in the revised version are:
+
+- Showing two homicide rates is redundant. Should focus on firearm-related homicide rate.
+- Adding signicance information could imply actions.
+
+
+## 2.3 Claim 9: Still, gun homicides (like all homicides) have declined over the past couple decades
+### 2.3.1 From original plots to deceptive plots
+Original Plot:
+```{r warning=FALSE, out.width = "50%"}
+include_graphics( "https://cdn.vox-cdn.com/thumbor/fsGRktGSnwO7XymX8qtP1unsFak=/0x0:417x395/1720x0/filters:focal(0x0:417x395):format(webp)/cdn.vox-cdn.com/uploads/chorus_asset/file/9371435/firearm_homicide_deaths.png")
+
+```
+
+This plot was supposed to support the claim “The good news is that firearm homicides, like all homicides and crime, have declined over the past two decades”. We indeed can see a declining trend from the plot. However, moving the time slot to more recent year, we can see a totally different story, as shown in the plot below.
+
+Deceptive Plot:
+```{r warning=FALSE, out.width = "70%"}
+knitr::include_graphics('deceptive-3.png')
+```
+
+From this plot we can see that when setting time frame as from 1998 to 2016, the trend of firearm homicide rate is even with fluctuation or slightly rising. This is definitely not a “good news” and the corresponding debate is meaningless. Further more, closely compating homicide rate with household gun ownership rate trend over time, we see some simutaneous up and down trend of those two, especially from 1998 to 2010.
+
+### 2.3.2 From first version to revised version
+```{r warning=FALSE, out.width = "50%"}
+knitr::include_graphics('3.png')
+```
+
+Problems with this plot that I fixed in the revised version are:
+
+- Vertical axis is not properly, cutting axis range can imrove pixel ratio.
+- Only fact number is provides, adding comparison could provide comprehension.
+
+# 3 Summary
+For redesigned version, it is important to show actionable advice directly or in directly. Giving plain fact numbers is sometimes meaningless and insufficient, while adding comparison or supportive data can produce comprehension and even projection. 
+
+For deceptive version, it is also important to give a second thought when we analyze a plot. The same data source can generate totally opposite opinions when we change the way to plot, as shown in this report. We should pay attention to the assumptions behind those plot and look for sound supports.
+
+# 4 Reference
+3.1 National Vital Statistics Reports(2013)
+https://www.cdc.gov/nchs/data/nvsr/nvsr64/nvsr64_02.pdf
+
+3.2 Adam Lankford(2016), Public Mass Shooters and Firearms: A Cross-National Study of 171 Countries.
+https://www.ncbi.nlm.nih.gov/pubmed/26822013
+
