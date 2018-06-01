@@ -58,8 +58,8 @@ hm1 <- plot_ly(data = MS_dataset
 subplot(hm1)
 ```
 ### 1.1.2 The redesigned plot:
-![](revised-finding-2.png)
-![](revised-finding-2-2.png)
+![](revised-finding-2.png)<!-- .element height="80%" width="80%" -->
+![](revised-finding-2-2.png)<!-- .element height="80%" width="80%" -->
 
 The upper plot tells us that the United States stands out among countries for the frequency with which its mass shootings occur and one variable that can explain the high rate of mass shootings in America is its astronomical number of guns. A country’s rate of gun ownership correlated with the odds it would experience a mass shooting(Adam Lankford, 2016)[2](https://www.ncbi.nlm.nih.gov/pubmed/26822013), even though there is only a few counties that have very high mass shooting records, we can still see such relationship by looking at Norway and France.
 
@@ -77,7 +77,7 @@ Problems with this plot that I fixed in the revised version are:
 
 In this report, I chose three claim from the original article and their corresponding plots, which I think would generate misunderstandings when being illustrated in deceptive ways. The original plots and deceptive plots are using almost the same data source but are shown in either different dimensions or different metics.
 
-2.1 Claim 1: America has six times as many firearm homicides as Canada, and nearly 16 times as many as Germany
+## 2.1 Claim 1: America has six times as many firearm homicides as Canada, and nearly 16 times as many as Germany
 Original Plot:
 ![]("https://cdn.vox-cdn.com/thumbor/Mu8atIOWulSS_ztu2cphOxgFsj4=/0x0:800x1571/1720x0/filters:focal(0x0:800x1571):format(webp)/cdn.vox-cdn.com/uploads/chorus_asset/file/10228297/gun_homicides_per_capita.jpg")<!-- .element height="50%" width="50%" -->
 
