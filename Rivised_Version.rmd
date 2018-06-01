@@ -80,7 +80,7 @@ In this report, I chose three claim from the original article and their correspo
 ## 2.1 Claim 1: America has six times as many firearm homicides as Canada, and nearly 16 times as many as Germany
 ### 2.1.1 From original plots to deceptive plots
 Original Plot:
-![]("https://cdn.vox-cdn.com/thumbor/Mu8atIOWulSS_ztu2cphOxgFsj4=/0x0:800x1571/1720x0/filters:focal(0x0:800x1571):format(webp)/cdn.vox-cdn.com/uploads/chorus_asset/file/10228297/gun_homicides_per_capita.jpg")<!-- .element height="50%" width="50%" -->
+![](https://cdn.vox-cdn.com/thumbor/Mu8atIOWulSS_ztu2cphOxgFsj4=/0x0:800x1571/1720x0/filters:focal(0x0:800x1571):format(webp)/cdn.vox-cdn.com/uploads/chorus_asset/file/10228297/gun_homicides_per_capita.jpg)<!-- .element height="50%" width="50%" -->
 
 This plot intends to tell us how severe the firearm homicide is in US, compared with other developed countries. However, there are several problem with this plot.
 
@@ -93,4 +93,4 @@ Here is plot from another point of view. When taking counties that have high gun
 
 ### 2.1.2 From first version to revised version
 First version plot:
-![](1.png){width="50%"}
+![](1.png)
