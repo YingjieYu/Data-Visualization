@@ -98,10 +98,44 @@ Problem with this plot that I fixed in the revised version is:
 - Making comparison directly among all developed countries might not be justifies. As we know, most of those countries have strict gun contrl policies. It could give us more comprehension if we make comparison based on countries that have high gun ownership.
 
 ## 2.2 Claim 6: It’s not just the US: Developed countries with more guns also have more gun deaths
-### 2.1.1 From original plots to deceptive plots
+### 2.2.1 From original plots to deceptive plots
+Original Plot:
 ![](https://cdn.vox-cdn.com/thumbor/55GPsm0JuIf0u68No9CVtqBLPuk=/0x0:3840x2794/1720x0/filters:focal(0x0:3840x2794):format(webp)/cdn.vox-cdn.com/uploads/chorus_asset/file/10328765/GUN_SCATTERPLOT_2x.png)
 From this plot we can intuitively inference that the higher the gun ownership rate, the higher the gun death. However, taking a further step of thought, we can find several issues:
 
 - When taking United States out of the plot, the relation is not necessarily straightforward and obvious, which is contrary to the claim “It’s not just the US”.
 - Gun-related death may not be a good metric to evaluate death rate because and gun-related death can be varies as homicide and suicide, as we mentioned above. Therefore, using a more specific death rate such as homicide rate should be more reasonable.
-- 
+- Fitted line is added but no significance information id provided.
+
+Deceptive Plot:
+![](deceptive-2.png)
+Here we can see from the plot of gun ownership rate vs. homicide rate for developed countries, the relationship is actually negative, which means the higher the gun ownership rate, the lower the homicide rate. Even when comparing the gun ownership with the firearm homicide rate, the relation still shows an negative trend.
+
+### 2.2.2 From first version to revised version
+![](2.1.png)
+![](2.2.png)
+![](2.3.png)
+Problems with this plot that I fixed in the revised version are:
+
+## 2.3 Claim 9: Still, gun homicides (like all homicides) have declined over the past couple decades
+### 2.3.1 From original plots to deceptive plots
+Original Plot:
+![](https://cdn.vox-cdn.com/thumbor/fsGRktGSnwO7XymX8qtP1unsFak=/0x0:417x395/1720x0/filters:focal(0x0:417x395):format(webp)/cdn.vox-cdn.com/uploads/chorus_asset/file/9371435/firearm_homicide_deaths.png)
+This plot was supposed to support the claim “The good news is that firearm homicides, like all homicides and crime, have declined over the past two decades”. We indeed can see a declining trend from the plot. However, moving the time slot to more recent year, we can see a totally different story, as shown in the plot below.
+Deceptive Plot:
+![](deceptive-3.png)
+From this plot we can see that when setting time frame as from 1998 to 2016, the trend of firearm homicide rate is even with fluctuation or slightly rising. This is definitely not a “good news” and the corresponding debate is meaningless.
+### 2.3.2 From first version to revised version
+![](3.png)
+Problems with this plot that I fixed in the revised version are:
+
+# 3 Summary
+In conclusion, it is also important to give a second thought when we analysis a plot. The same data source can generate totally opposite opinions when we change the way to plot, as shown in this report. We should pay attention to the assumptions behind those plot and look for sound supports.
+
+# 4 Reference
+3.1 National Vital Statistics Reports(2013)
+https://www.cdc.gov/nchs/data/nvsr/nvsr64/nvsr64_02.pdf
+
+3.2 Adam Lankford(2016), Public Mass Shooters and Firearms: A Cross-National Study of 171 Countries.
+https://www.ncbi.nlm.nih.gov/pubmed/26822013
+
