@@ -58,6 +58,11 @@ hm1 <- plot_ly(data = MS_dataset
 subplot(hm1)
 ```
 ### 1.1.2 The redesigned plot:
-![]('revised-finding-2.png')
-![]('revised-finding-2-2.png')
+![](revised-finding-2.png)
+![](revised-finding-2-2.png)
+
+The upper plot tells us that the United States stands out among countries for the frequency with which its mass shootings occur and one variable that can explain the high rate of mass shootings in America is its astronomical number of guns. A country’s rate of gun ownership correlated with the odds it would experience a mass shooting(Adam Lankford, 2016)[2](https://www.ncbi.nlm.nih.gov/pubmed/26822013), even though there is only a few counties that have very high mass shooting records, we can still see such relationship by looking at Norway and France.
+
+The plot also confirms the fact that there is no a high volume time for mass shooting, and therefore supports the opinion that “it will just about never be the right time to discuss gun control”. We can also conclude from the plot that mass shooting in US tends to be more severe and frequent, which should give alarm to local authorities.
+
 
