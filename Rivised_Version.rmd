@@ -1,0 +1,95 @@
+## 1.2 Finding 2: The United States’s stands out mass shooting frequency
+### 1.2.1 Description:
+In the provided article, discussion about mass public shooting was limited to the number and distribution of mass shooting in U.S. It did not give an worldwide comparison to illustrate how severe mass shooting is in US, so audience can not decide whether mass shooting is a US-unique issue or not. Therefore, it make sense to address mass shooting question by adding comparison to gauge severity of mass shooting. Besides, listing fact numbers of mass shooting gives no clue on what leads to severe mass shooting events or what measures may take to solve mass shooting, which is another limitation of original plots. The original plot supporting the claim that “On average, there is around one mass shooting for each day in America” also has limitation, it focus only on 2015, ignoring the possibility that 2015 might be a specific year that is not typical from other year.
+To illustrate mass shooting issue better, I firstly made comparison among US, UK, Canada and some European countries to show how severe that issue is in US and then further checked the year and month distribution in an extended period.
+
+Data Wrangling:
+```{r}
+library(data.table)
+library(plotly)
+library(ggplot2)
+library(tm)
+
+MS_dataset <- read_csv("Mass Shootings Dataset Ver 5.csv"
+                              , col_types = cols(Date = col_date(format = "%m/%d/%Y")))
+MS_dataset <- data.table(MS_dataset)
+
+MS_dataset[,Month:=as.factor(month(Date))]
+MS_dataset[,Year_n:=as.numeric(year(Date))]
+MS_dataset[,Year:=as.factor(year(Date))]
+
+plot_ly(data = MS_dataset
+        ,type = 'scatter'
+        ,mode = 'markers' 
+        ,hoverinfo = 'text'
+        ,x = ~Month
+        ,y = ~Year
+        ,size = ~`Total victims`
+        ,alpha = 0.6
+        ,text = ~paste("Location: ", Location
+               ,'\n Date: ', Date 
+               ,'\n Total victims : ', `Total victims` 
+               ,'\n Fatalities : ', Fatalities
+               ,'\n Injured : ', Injured)) %>% 
+  layout(title = "Mass Shootings in US by years and month"
+         , xaxis = list(title = "Month")
+         , yaxis = list(title = "Years"))
+
+
+f1 <- list(
+  family = "Arial, sans-serif",
+  size = 14,
+  color = "grey"
+)
+f2 <- list(
+  family = "Old Standard TT, serif",
+  size = 12,
+  color = "black"
+)
+
+# Axis settings
+ax <- list(
+  title = "Month",
+  titlefont = f1,
+  showticklabels = TRUE,
+  tickangle = 0,
+  tickfont = f2,
+  exponentformat = "E"
+)
+
+ay <- list(
+  title = "Year",
+  titlefont = f1,
+  showticklabels = TRUE,
+  tickangle = 0,
+  tickfont = f2,
+  exponentformat = "E"
+)
+
+b1 <- list(
+  text = "Total victims",
+  font = f1,
+  xref = "paper",
+  yref = "paper",
+  yanchor = "bottom",
+  xanchor = "center",
+  align = "center",
+  x = 0.5,
+  y = 1,
+  showarrow = FALSE
+)
+
+hm1 <- 
+plot_ly(data = MS_dataset
+        ,type = 'heatmap'
+        ,colors = colorRamp(c("yellow", "blue", "darkred"))
+        ,x = ~Month
+        ,y = ~Year
+        ,z = ~`Total victims`)%>%
+  layout(showlegend = T
+         , xaxis = ax
+         , yaxis = ay
+         , annotations = b1)
+         
+subplot(hm1)
+```
