@@ -78,13 +78,19 @@ Problems with this plot that I fixed in the revised version are:
 In this report, I chose three claim from the original article and their corresponding plots, which I think would generate misunderstandings when being illustrated in deceptive ways. The original plots and deceptive plots are using almost the same data source but are shown in either different dimensions or different metics.
 
 ## 2.1 Claim 1: America has six times as many firearm homicides as Canada, and nearly 16 times as many as Germany
+### 2.1.1 From original plots to deceptive plots
 Original Plot:
 ![]("https://cdn.vox-cdn.com/thumbor/Mu8atIOWulSS_ztu2cphOxgFsj4=/0x0:800x1571/1720x0/filters:focal(0x0:800x1571):format(webp)/cdn.vox-cdn.com/uploads/chorus_asset/file/10228297/gun_homicides_per_capita.jpg")<!-- .element height="50%" width="50%" -->
 
 This plot intends to tell us how severe the firearm homicide is in US, compared with other developed countries. However, there are several problem with this plot.
 
-- It does not provide explanation for choosing those 14 countries. As we know, there are 34 developed countries in the world
+- It does not provide explanation for choosing those 14 countries. As we know, there are 34 developed countries in the world and most of them have a compeletely different gun control situation from U.S..
 - A huge part of developed countries have strict gun control. Therefore, directly making comparison of firearm homicide rate may be not make any sense.
 
-![](deceptive-1.png){:height="50%" width="50%"}
+![](deceptive-1.png)<!-- .element height="50%" width="50%" -->
 
+Here is plot from another point of view. When taking counties that have high gun ownerhship rate into consideration, we can see that even though US has been critized by its high gun ownership, it dose not ranks tops in both firearm homicide rate. Furthermore, when taking gun ownership rate into consideration, we can find that US still does not show up in terms of homicide to gun ownership rate. 
+
+### 2.1.2 From first version to revised version
+First version plot:
+![](1.png){width="50%"}
