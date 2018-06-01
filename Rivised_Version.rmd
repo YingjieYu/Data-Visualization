@@ -65,4 +65,12 @@ The upper plot tells us that the United States stands out among countries for th
 
 The plot also confirms the fact that there is no a high volume time for mass shooting, and therefore supports the opinion that “it will just about never be the right time to discuss gun control”. We can also conclude from the plot that mass shooting in US tends to be more severe and frequent, which should give alarm to local authorities.
 
+### 1.2.3 Improvement from first version to revised version
+The first version of redesigned:
+![](1st-finding-2.png)
+Problems with this plot that I fixed in the revised version are:
+- The most severe problem with this plot is that it uses unjustified variable, which is average frequency of mass shooting per million capita. Mass shooting is a very special issue and each event has influence over whole country, therefore  discussing mass shooting problem on a per capita basis just makes it seems less concerning and is misleading. Using per-existence rather than per-capita variable for mass shooting is more appropriate.
+- The second problem is that the plot does not provide metrics to provide explanation. By adding gun-ownership rate, we could have more clue regarding what lead to mass shooting.
+- Putting US besides the highest one is somehow deceptive
+
 
