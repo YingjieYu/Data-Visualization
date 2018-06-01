@@ -86,5 +86,5 @@ This plot intends to tell us how severe the firearm homicide is in US, compared 
 - It does not provide explanation for choosing those 14 countries. As we know, there are 34 developed countries in the world
 - A huge part of developed countries have strict gun control. Therefore, directly making comparison of firearm homicide rate may be not make any sense.
 
-![](deceptive-1.png)<!-- .element height="80%" width="80%" -->
+![](deceptive-1.png){:height="50%" width="50%"}
 
