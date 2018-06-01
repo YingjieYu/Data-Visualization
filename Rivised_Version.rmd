@@ -36,60 +36,28 @@ plot_ly(data = MS_dataset
          , yaxis = list(title = "Years"))
 
 
-f1 <- list(
-  family = "Arial, sans-serif",
-  size = 14,
-  color = "grey"
-)
-f2 <- list(
-  family = "Old Standard TT, serif",
-  size = 12,
-  color = "black"
-)
+f1 <- list(family = "Arial, sans-serif",size = 14,color = "grey")
+f2 <- list(family = "Old Standard TT, serif",size = 12,color = "black")
 
 # Axis settings
-ax <- list(
-  title = "Month",
-  titlefont = f1,
-  showticklabels = TRUE,
-  tickangle = 0,
-  tickfont = f2,
-  exponentformat = "E"
-)
+ax <- list(title = "Month",titlefont = f1,showticklabels = TRUE,tickangle = 0,tickfont = f2,exponentformat = "E")
 
-ay <- list(
-  title = "Year",
-  titlefont = f1,
-  showticklabels = TRUE,
-  tickangle = 0,
-  tickfont = f2,
-  exponentformat = "E"
-)
+ay <- list(title = "Year",titlefont = f1,showticklabels = TRUE,tickangle = 0,tickfont = f2,exponentformat = "E")
 
-b1 <- list(
-  text = "Total victims",
-  font = f1,
-  xref = "paper",
-  yref = "paper",
-  yanchor = "bottom",
-  xanchor = "center",
-  align = "center",
-  x = 0.5,
-  y = 1,
-  showarrow = FALSE
-)
+b1 <- list(text = "Total victims",font = f1,xref = "paper",yref = "paper",yanchor = "bottom",xanchor = "center",align = "center",x = 0.5,y = 1,showarrow = FALSE)
 
-hm1 <- 
-plot_ly(data = MS_dataset
+hm1 <- plot_ly(data = MS_dataset
         ,type = 'heatmap'
         ,colors = colorRamp(c("yellow", "blue", "darkred"))
         ,x = ~Month
         ,y = ~Year
-        ,z = ~`Total victims`)%>%
-  layout(showlegend = T
+        ,z = ~`Total victims`)%>%layout(showlegend = T
          , xaxis = ax
          , yaxis = ay
          , annotations = b1)
-         
 subplot(hm1)
 ```
+### 1.1.2 The redesigned plot:
+![]('revised-finding-2.png')
+![]('revised-finding-2-2.png')
+
