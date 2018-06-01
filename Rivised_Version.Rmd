@@ -94,3 +94,14 @@ Here is plot from another point of view. When taking counties that have high gun
 ### 2.1.2 From first version to revised version
 First version plot:
 ![](1.png)
+Problem with this plot that I fixed in the revised version is:
+- Making comparison directly among all developed countries might not be justifies. As we know, most of those countries have strict gun contrl policies. It could give us more comprehension if we make comparison based on countries that have high gun ownership.
+
+## 2.2 Claim 6: It’s not just the US: Developed countries with more guns also have more gun deaths
+### 2.1.1 From original plots to deceptive plots
+![](https://cdn.vox-cdn.com/thumbor/55GPsm0JuIf0u68No9CVtqBLPuk=/0x0:3840x2794/1720x0/filters:focal(0x0:3840x2794):format(webp)/cdn.vox-cdn.com/uploads/chorus_asset/file/10328765/GUN_SCATTERPLOT_2x.png)
+From this plot we can intuitively inference that the higher the gun ownership rate, the higher the gun death. However, taking a further step of thought, we can find several issues:
+
+- When taking United States out of the plot, the relation is not necessarily straightforward and obvious, which is contrary to the claim “It’s not just the US”.
+- Gun-related death may not be a good metric to evaluate death rate because and gun-related death can be varies as homicide and suicide, as we mentioned above. Therefore, using a more specific death rate such as homicide rate should be more reasonable.
+- 
