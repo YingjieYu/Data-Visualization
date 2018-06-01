@@ -1,3 +1,8 @@
+<style type="text/css"> body{ /* Normal */ font-size: 14px; } </style>
+
+library(knitr)
+include_graphics("https://cdn.vox-cdn.com/thumbor/Mu8atIOWulSS_ztu2cphOxgFsj4=/0x0:800x1571/1720x0/filters:focal(0x0:800x1571):format(webp)/cdn.vox-cdn.com/uploads/chorus_asset/file/10228297/gun_homicides_per_capita.jpg")
+
 ## 1.2 Finding 2: The United States’s stands out mass shooting frequency
 ### 1.2.1 Description:
 In the provided article, discussion about mass public shooting was limited to the number and distribution of mass shooting in U.S. It did not give an worldwide comparison to illustrate how severe mass shooting is in US, so audience can not decide whether mass shooting is a US-unique issue or not. Therefore, it make sense to address mass shooting question by adding comparison to gauge severity of mass shooting. Besides, listing fact numbers of mass shooting gives no clue on what leads to severe mass shooting events or what measures may take to solve mass shooting, which is another limitation of original plots. The original plot supporting the claim that “On average, there is around one mass shooting for each day in America” also has limitation, it focus only on 2015, ignoring the possibility that 2015 might be a specific year that is not typical from other year.
@@ -100,7 +105,8 @@ Problem with this plot that I fixed in the revised version is:
 ## 2.2 Claim 6: It’s not just the US: Developed countries with more guns also have more gun deaths
 ### 2.2.1 From original plots to deceptive plots
 Original Plot:
-![](https://cdn.vox-cdn.com/thumbor/55GPsm0JuIf0u68No9CVtqBLPuk=/0x0:3840x2794/1720x0/filters:focal(0x0:3840x2794):format(webp)/cdn.vox-cdn.com/uploads/chorus_asset/file/10328765/GUN_SCATTERPLOT_2x.png)
+include_graphics( "https://cdn.vox-cdn.com/thumbor/55GPsm0JuIf0u68No9CVtqBLPuk=/0x0:3840x2794/1720x0/filters:focal(0x0:3840x2794):format(webp)/cdn.vox-cdn.com/uploads/chorus_asset/file/10328765/GUN_SCATTERPLOT_2x.png")
+
 From this plot we can intuitively inference that the higher the gun ownership rate, the higher the gun death. However, taking a further step of thought, we can find several issues:
 
 - When taking United States out of the plot, the relation is not necessarily straightforward and obvious, which is contrary to the claim “It’s not just the US”.
@@ -112,9 +118,9 @@ Deceptive Plot:
 Here we can see from the plot of gun ownership rate vs. homicide rate for developed countries, the relationship is actually negative, which means the higher the gun ownership rate, the lower the homicide rate. Even when comparing the gun ownership with the firearm homicide rate, the relation still shows an negative trend.
 
 ### 2.2.2 From first version to revised version
-![](2.1.png)
-![](2.2.png)
-![](2.3.png)
+knitr::include_graphics("2.1.png")
+knitr::include_graphics("2.2.png")
+knitr::include_graphics("2.3.png")
 Problems with this plot that I fixed in the revised version are:
 
 ## 2.3 Claim 9: Still, gun homicides (like all homicides) have declined over the past couple decades
@@ -123,10 +129,10 @@ Original Plot:
 ![](https://cdn.vox-cdn.com/thumbor/fsGRktGSnwO7XymX8qtP1unsFak=/0x0:417x395/1720x0/filters:focal(0x0:417x395):format(webp)/cdn.vox-cdn.com/uploads/chorus_asset/file/9371435/firearm_homicide_deaths.png)
 This plot was supposed to support the claim “The good news is that firearm homicides, like all homicides and crime, have declined over the past two decades”. We indeed can see a declining trend from the plot. However, moving the time slot to more recent year, we can see a totally different story, as shown in the plot below.
 Deceptive Plot:
-![](deceptive-3.png)
+knitr::include_graphics('deceptive-3.png')
 From this plot we can see that when setting time frame as from 1998 to 2016, the trend of firearm homicide rate is even with fluctuation or slightly rising. This is definitely not a “good news” and the corresponding debate is meaningless.
 ### 2.3.2 From first version to revised version
-![](3.png)
+knitr::include_graphics("3.png")
 Problems with this plot that I fixed in the revised version are:
 
 # 3 Summary
